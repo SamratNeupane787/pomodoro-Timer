@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My-To-DO-LIST</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class=" text-4xl">Create A ToDo List</h1>
+    </header>
+
+    <div class=" pomodoro text-center text-5xl pt-15">
+
+      <div class=" break text-sm">
+
+        <button class="btn-focus text-black bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >
+       Focus
+        </button>
+        <button class="btn-sh text-black bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >
+          Short Break
+        </button>
+   
+
+  
+       
+      </div>
+  
+      <div class=" timer pt-8">
+        <div class=" focus-Time">
+        <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+
+       
+      </div>
+      <div class=" operations text-sm py-3 flex justify-center">
+      
+        <button class=" start  ml-4 text-black bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="timerStart()">
+          Start
+        </button>
+
+       
+    
+        <button class=" reset  ml-4 bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="resetTime();">
+          Reset
+        </button>
+        <button class=" stop ml-4 bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="stopFun();">
+          Stop
+        </button>
+
+
+
+
+        
+        <button class=" start-break  ml-4 items-center text-black bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="shortBreakfUN()" >
+          Start
+        </button>
+
+        <button  class=" stop-break  ml-4 items-center text-black bg-[#BBC5AA] text-black hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="stopFun();" >
+          Stop
+        </button>
+
+
+        
+      </div>
+
+     
+     
+
+      
+
+
+
+
+      </div>
+  
+  
+      
+      
+    </div>
+
+    <form >
+      <input type="text" class="todo-input" />
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      <div class="select">
+        <select name="todo" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
+    </form>
+
+
+
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+    
+    <script src="./app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
