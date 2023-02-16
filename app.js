@@ -1,3 +1,4 @@
+
 //selectors
 const todoInput = document.querySelector('.todo-input');
 const todobutton = document.querySelector('.todo-button');
@@ -316,4 +317,3 @@ function stopFun(){
   clearInterval(interval)
 
 }
-
